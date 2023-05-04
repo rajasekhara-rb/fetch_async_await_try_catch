@@ -10,13 +10,12 @@ async function getData() {
         let fetchData = await fetch(url);
         let data = await fetchData.json();
         console.log(data);
-        let output ="";
+        let output = "";
 
         data["results"].forEach(e => {
             output += `
-            <ol>
-                       <li>${e.name.title +" "+ e.name.first + " "+ e.name.last}</li>
-                         </ol>  `
+                                  <li>${e.name.title + " " + e.name.first + " " + e.name.last}</li>
+         `
         });
 
         nameCard.innerHTML = output;
