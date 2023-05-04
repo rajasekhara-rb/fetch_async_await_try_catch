@@ -14,8 +14,9 @@ async function getData() {
 
         data["results"].forEach(e => {
             output += `
+            <ol>
                        <li>${e.name.title +" "+ e.name.first + " "+ e.name.last}</li>
-                           `
+                         </ol>  `
         });
 
         nameCard.innerHTML = output;
